@@ -1,0 +1,47 @@
+body{
+  background: #1e1e1e;
+  color: #ffffff;  
+}
+
+.calculator-grid {
+  display: grid;
+  /* Definimos 2 columnas para los números + 1 para operaciones */
+  grid-template-columns: 1fr 1fr 60px; 
+  gap: 10px;
+  width: 400px;
+}
+
+.input-num{
+  border-radius: 12px;   
+
+}
+/* El resultado (input 3) ocupa 2 columnas para quedar abajo de los dos primeros */
+.input-res {
+  grid-column: 1 / span 2;
+  border-radius: 12px;   
+}
+
+/* La columna de operaciones se queda a la derecha y ocupa las dos filas de alto */
+.ops-aside {
+  grid-column: 3;
+  grid-row: 1 / span 2;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+button {
+  background-color: #007ACC; /* Azul clásico de VS Code */
+  color: #ffffff;            /* Texto blanco */
+  border: none;              /* Quita el borde gris feo */
+  padding: 10px;
+  border-radius: 12px;        /* Bordes suavemente redondeados */
+  cursor: pointer;           /* Cambia el cursor a una mano */
+  font-weight: bold;
+  transition: background 0.2s; /* Para que el cambio de color sea suave */
+}
+
+/* Efecto al pasar el mouse */
+button:hover {
+  background-color: #005A9E; /* Un azul más oscuro */
+}
